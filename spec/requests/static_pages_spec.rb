@@ -20,7 +20,7 @@ describe "StaticPages" do
 
 		describe "Help Page" do
 			it "should have the content 'Help'" do
-				visit 'static_pages/help'
+				visit '/static_pages/help'
 				page.should have_content('Help')
 			end
 		end
