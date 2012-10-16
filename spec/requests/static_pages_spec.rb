@@ -15,10 +15,15 @@ describe "StaticPages" do
 				visit '/static_pages/home'
 				page.should have_content('Sample App')	
 			end
-			it "should have title | Home" do
+			it "should have base title" do
 				visit '/static_pages/home'
 				page.should have_selector('title' , 
-					:text => '| Home')
+					:text => 'RoR Tutorial')
+			end
+			it "should not have custom page_title" do
+				visit '/static_pages/home'
+				page.should_not have_selector('title',
+					:text => "| Home")
 			end
 		end
 
