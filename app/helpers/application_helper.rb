@@ -3,7 +3,7 @@ module ApplicationHelper
 #if the page title is empty returns base title
 
 	def full_title(page_title)
-		base_title = "RoR Tutorial"
+		base_title = "Zelvo"
 		if page_title.empty?
 			return base_title
 		else
